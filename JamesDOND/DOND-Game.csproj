@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52EAB7FB-34EF-4557-BA80-432E98111F8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JamesDOND.Game</RootNamespace>
+    <AssemblyName>JamesDOND</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EventForm.resx">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank_offer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_hand_drawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_hand_drawn_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_hand_drawn_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_hand_drawn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_main_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_nocases_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkg_nocases2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_deal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_keep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_noDeal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_swap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_closed_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_only_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\case_open_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_deal_btn-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_keep_btn-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_bkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_back_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_back_2_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output_qut1uY.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_back_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_back_large_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_back_large_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel_main_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_case.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent_background_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent_background_medium1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DOND-Control\DOND-Controller.csproj">
+      <Project>{33d60c71-f9af-4ea1-9013-b2366ba481af}</Project>
+      <Name>DOND-Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DOND-Data\DOND-Data.csproj">
+      <Project>{6d898cd0-0315-41d8-a73f-920b64a9131a}</Project>
+      <Name>DOND-Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

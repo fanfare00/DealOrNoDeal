@@ -1,0 +1,4 @@
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\bin\Debug\DOND-Application.exe.config
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\obj\Debug\DOND-Application.csprojResolveAssemblyReference.cache
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\obj\Debug\DOND_Application.Properties.Resources.resources
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\obj\Debug\DOND-Application.csproj.GenerateResource.Cache

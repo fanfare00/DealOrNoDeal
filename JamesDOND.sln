@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOND-Game", "JamesDOND\DOND-Game.csproj", "{52EAB7FB-34EF-4557-BA80-432E98111F8E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33D60C71-F9AF-4EA1-9013-B2366BA481AF} = {33D60C71-F9AF-4EA1-9013-B2366BA481AF}
+		{6D898CD0-0315-41D8-A73F-920B64A9131A} = {6D898CD0-0315-41D8-A73F-920B64A9131A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOND-Data", "DOND-Data\DOND-Data.csproj", "{6D898CD0-0315-41D8-A73F-920B64A9131A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOND-Controller", "DOND-Control\DOND-Controller.csproj", "{33D60C71-F9AF-4EA1-9013-B2366BA481AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D898CD0-0315-41D8-A73F-920B64A9131A} = {6D898CD0-0315-41D8-A73F-920B64A9131A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JamesDONDApplication", "DOND-Application\JamesDONDApplication.csproj", "{EF4B5D4B-70F8-4E52-88EF-F5893FE10D5B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33D60C71-F9AF-4EA1-9013-B2366BA481AF} = {33D60C71-F9AF-4EA1-9013-B2366BA481AF}
+		{6D898CD0-0315-41D8-A73F-920B64A9131A} = {6D898CD0-0315-41D8-A73F-920B64A9131A}
+		{52EAB7FB-34EF-4557-BA80-432E98111F8E} = {52EAB7FB-34EF-4557-BA80-432E98111F8E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52EAB7FB-34EF-4557-BA80-432E98111F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52EAB7FB-34EF-4557-BA80-432E98111F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52EAB7FB-34EF-4557-BA80-432E98111F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52EAB7FB-34EF-4557-BA80-432E98111F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D898CD0-0315-41D8-A73F-920B64A9131A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D898CD0-0315-41D8-A73F-920B64A9131A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D898CD0-0315-41D8-A73F-920B64A9131A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D898CD0-0315-41D8-A73F-920B64A9131A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D60C71-F9AF-4EA1-9013-B2366BA481AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D60C71-F9AF-4EA1-9013-B2366BA481AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D60C71-F9AF-4EA1-9013-B2366BA481AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D60C71-F9AF-4EA1-9013-B2366BA481AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4B5D4B-70F8-4E52-88EF-F5893FE10D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4B5D4B-70F8-4E52-88EF-F5893FE10D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4B5D4B-70F8-4E52-88EF-F5893FE10D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4B5D4B-70F8-4E52-88EF-F5893FE10D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
