@@ -16,7 +16,7 @@ namespace JamesDOND.Game
             this.DoubleBuffered = true;
 
             this.BackColor = Color.Black;
-            this.Opacity = 0.00;      // Tweak as desired
+            this.Opacity = 0.75;      // Tweak as desired
             this.FormBorderStyle = FormBorderStyle.None;
             this.ControlBox = false;
             this.ShowInTaskbar = false;

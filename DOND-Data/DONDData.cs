@@ -29,12 +29,12 @@ namespace JamesDOND.Data
             set { _moneyValues = value; }
         }
 
-        private int[] _originalMoneyValues;
-        public int[] originalMoneyValues
-        {
-            get { return _originalMoneyValues; }
-            set { _originalMoneyValues = value; }
-        }
+        //private int[] _originalMoneyValues;
+        //public int[] originalMoneyValues
+        //{
+        //    get { return _originalMoneyValues; }
+        //    set { _originalMoneyValues = value; }
+        //}
 
     }
 }

@@ -5,3 +5,10 @@ C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Contro
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Control\obj\Debug\DOND-Control.pdb
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Control\bin\Debug\DOND-Data.dll
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Control\bin\Debug\DOND-Data.pdb
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\bin\Debug\DOND-Control.dll
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\bin\Debug\DOND-Control.pdb
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\bin\Debug\DOND-Data.dll
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\bin\Debug\DOND-Data.pdb
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\obj\Debug\DOND-Controller.csprojResolveAssemblyReference.cache
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\obj\Debug\DOND-Control.dll
+C:\Users\JamesM\Desktop\CompSci 2015\DOND_MVC\DOND-Control\obj\Debug\DOND-Control.pdb

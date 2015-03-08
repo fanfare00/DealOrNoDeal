@@ -23,6 +23,8 @@ namespace JamesDOND.Game
             overlay = new Overlay(this);
             eventForm = new EventForm(this);
 
+            eventForm.Hide();
+            overlay.Hide();
             InitializeComponent();
         }
 
@@ -33,7 +35,12 @@ namespace JamesDOND.Game
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addOverlay();
+            Close();
+        }
+
+        public void addCaseOpenScene()
+        {
+            //eventForm.addCaseOpenScene
         }
     }
 
