@@ -12,3 +12,10 @@ C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Contro
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Control\obj\Debug\DOND-Controller.csprojResolveAssemblyReference.cache
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Control\obj\Debug\DOND-Control.dll
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Control\obj\Debug\DOND-Control.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\bin\Debug\DOND-Control.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\bin\Debug\DOND-Control.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\bin\Debug\DOND-Data.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\bin\Debug\DOND-Data.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\obj\Debug\DOND-Controller.csprojResolveAssemblyReference.cache
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\obj\Debug\DOND-Control.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Control\obj\Debug\DOND-Control.pdb

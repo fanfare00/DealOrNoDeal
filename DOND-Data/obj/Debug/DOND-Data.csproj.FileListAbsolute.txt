@@ -7,3 +7,7 @@ C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Data\b
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Data\bin\Debug\DOND-Data.pdb
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Data\obj\Debug\DOND-Data.dll
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Data\obj\Debug\DOND-Data.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Data\bin\Debug\DOND-Data.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Data\bin\Debug\DOND-Data.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Data\obj\Debug\DOND-Data.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Data\obj\Debug\DOND-Data.pdb

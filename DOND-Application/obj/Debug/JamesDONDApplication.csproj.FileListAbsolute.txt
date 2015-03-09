@@ -24,3 +24,16 @@ C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Applic
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\obj\Debug\JamesDONDApplication.csproj.GenerateResource.Cache
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\obj\Debug\DOND-Application.exe
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\obj\Debug\DOND-Application.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\obj\Debug\DOND-Application.exe
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\obj\Debug\DOND-Application.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\DOND-Application.exe
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\DOND-Application.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\DOND-Control.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\DOND-Data.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\JamesDOND.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\DOND-Control.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\DOND-Data.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\JamesDOND.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\obj\Debug\JamesDONDApplication.csprojResolveAssemblyReference.cache
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\obj\Debug\JamesDONDApplication.Properties.Resources.resources
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\obj\Debug\JamesDONDApplication.csproj.GenerateResource.Cache

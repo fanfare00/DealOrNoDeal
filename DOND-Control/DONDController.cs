@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using JamesDOND.Data;
+using System.Collections.Generic;
 
 namespace JamesDOND.Controller
 {
@@ -115,6 +116,38 @@ namespace JamesDOND.Controller
             _eventForm.CaseValue = value;
         }
 
+        public void updateWinnings()
+        {
+            _gameData.TotalWinnings += _eventForm.CaseValue;
+            _mainForm.TotalWinnings += _gameData.TotalWinnings;
+        }
+
+        public void updateGamesPlayed()
+        {
+            _gameData.GamesPlayed += 1;
+            _mainForm.GamesPlayed += 1;
+        }
+
+        public void restartGame()
+        {
+            List<int> moneyValues =  new List<int>() { 1, 5, 10, 15, 25, 50, 75, 100, 200, 300, 
+                                                       400, 500, 750, 1000, 5000, 10000, 25000, 
+                                                       50000, 75000, 100000, 200000, 300000, 
+                                                       400000, 500000, 750000, 1000000 };
+
+            List<int> caseNumbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+                                                      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 };
+            _gameData.CaseNumberOriginal = 0;
+            _gameData.CaseNumberPicked = 0;
+            _gameData.CaseNumberFinal = 0;
+
+            _gameData.CaseNumbers = caseNumbers;
+            _gameData.MoneyValues = moneyValues;
+            _mainForm.ResetForm();
+            _gameData.TurnsBeforeOffer = 6;
+            _mainForm.TurnsBeforeOffer = 6;
+            _mainForm.TurnNumber = 6;
+        }
         
     }
 

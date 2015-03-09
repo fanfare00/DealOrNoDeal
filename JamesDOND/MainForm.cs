@@ -15,12 +15,14 @@ namespace JamesDOND.Game
 {
     public partial class MainForm : Form, IMainForm
     {
-        Overlay overlay;
-        //EventForm eventForm;
+
         DONDController _controller;
         private int _caseNumber;
         private int _turnNumber;
         private int _TurnsBeforeOffer;
+        private int _GamesPlayed;
+        private int _TotalEarnings;
+        
         //private int caseNumberOriginal;
         //private int caseNumberFinal;
 
@@ -55,6 +57,35 @@ namespace JamesDOND.Game
             _controller = controller;
         }
 
+        public void ResetForm()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                {
+                    c.Visible = true;
+                }
+            }
+
+            UpdateGameInfo();
+
+            labelPickAText.Visible = true;
+            labelCaseText.Visible = true;
+            labelCaseCount.Visible = false;
+            labelCasesText.Visible = false;
+            labelToOpenText.Visible = false;
+            buttonMyCase.Text = "?";
+        }
+
+        public void UpdateGameInfo()
+        {
+            _turnNumber = 6;
+            _TurnsBeforeOffer = 6;
+            
+            labelGamesPlayed.Text = (_GamesPlayed+1).ToString();
+            labelMoneyEarned.Text = _TotalEarnings.ToString("c0");
+        }
+
         public void SetInitialCase(int caseNumberOriginal)
         {
             buttonMyCase.Text = caseNumberOriginal.ToString();
@@ -65,14 +96,6 @@ namespace JamesDOND.Game
             labelToOpenText.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //overlay.Show();
-            //overlay.fade(Overlay.fadeIn);
-            _controller.getNewCaseValue();
-            _controller.addCaseScene();
-            
-        }
 
         public int TurnsBeforeOffer
         {
@@ -96,8 +119,8 @@ namespace JamesDOND.Game
 
         public int GamesPlayed
         {
-            get { return Int32.Parse(this.labelGamesPlayed.Text); }
-            set { this.labelGamesPlayed.Text = value.ToString(); }
+            get { return _GamesPlayed; }
+            set { this._GamesPlayed = value; }
         }
 
         public int CaseNumber
@@ -106,26 +129,10 @@ namespace JamesDOND.Game
             set { this._caseNumber = value; }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public int TotalWinnings
         {
-            this._controller.addNewUser("check");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //overlay.Show();
-            //overlay.fade(Overlay.fadeIn);
-            _controller.getNewCaseValue();
-            _controller.getNewOfferValue();
-            _controller.addOfferScene();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //overlay.Show();
-            //overlay.fade(Overlay.fadeIn);
-            _controller.getNewCaseValue();
-            _controller.addFinalScene();
+            get { return this._TotalEarnings; }
+            set { this._TotalEarnings = value; }
         }
 
         private void buttonCase_Click(object sender, EventArgs e)
@@ -139,16 +146,24 @@ namespace JamesDOND.Game
 
             if (_turnNumber == 0)
             {
-                _turnNumber = _TurnsBeforeOffer-1;
-                _TurnsBeforeOffer -= 1;
 
-                if (_TurnsBeforeOffer < 1)
+
+                if (_TurnsBeforeOffer > 1)
+                {
+ 
+                    _TurnsBeforeOffer -= 1;
+                }
+                else
                 {
                     _TurnsBeforeOffer = 1;
                 }
 
+                
+
                 _controller.getNewOfferValue();
                 _controller.addOfferScene();
+
+                _turnNumber = _TurnsBeforeOffer - 1;
                
                 this.labelCaseCount.Text = _turnNumber.ToString();
             }
@@ -156,14 +171,18 @@ namespace JamesDOND.Game
             {
                 _controller.addCaseScene();
             }
-            else
+            else if (_turnNumber == -1)
             {
-                
-                // if (_turnNumber == -1)
+
+                //  
                 _controller.addFinalScene();
             }
 
         }
+
+
+
+
 
 
     }

@@ -72,6 +72,13 @@ namespace JamesDOND.Data
             set { _TurnsBeforeOffer = value; }
         }
 
+        private int _TotalWinnings;
+        public int TotalWinnings
+        {
+            get { return _TotalWinnings; }
+            set { _TotalWinnings = value; }
+        }
+
         public DONDData(string userName, List<int> moneyValues, List<int>caseNumbers, int turnsBeforeOffer, int gamesPlayed, int caseNumberPicked, int caseNumberOriginal, int caseNumberFinal)
         {
             UserName = userName;

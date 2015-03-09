@@ -64,11 +64,11 @@
             this.labelMyCase = new System.Windows.Forms.Label();
             this.buttonMyCase = new System.Windows.Forms.Button();
             this.panelCasePicks = new System.Windows.Forms.Panel();
-            this.labelPickAText = new System.Windows.Forms.Label();
-            this.labelCaseText = new System.Windows.Forms.Label();
-            this.labelCaseCount = new System.Windows.Forms.Label();
             this.labelCasesText = new System.Windows.Forms.Label();
+            this.labelCaseCount = new System.Windows.Forms.Label();
+            this.labelPickAText = new System.Windows.Forms.Label();
             this.labelToOpenText = new System.Windows.Forms.Label();
+            this.labelCaseText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -686,28 +686,17 @@
             this.panelCasePicks.Size = new System.Drawing.Size(256, 72);
             this.panelCasePicks.TabIndex = 104;
             // 
-            // labelPickAText
+            // labelCasesText
             // 
-            this.labelPickAText.BackColor = System.Drawing.Color.Transparent;
-            this.labelPickAText.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPickAText.ForeColor = System.Drawing.Color.DimGray;
-            this.labelPickAText.Location = new System.Drawing.Point(74, 3);
-            this.labelPickAText.Name = "labelPickAText";
-            this.labelPickAText.Size = new System.Drawing.Size(107, 29);
-            this.labelPickAText.TabIndex = 4;
-            this.labelPickAText.Text = "PICK A";
-            // 
-            // labelCaseText
-            // 
-            this.labelCaseText.BackColor = System.Drawing.Color.Transparent;
-            this.labelCaseText.Font = new System.Drawing.Font("Elephant", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaseText.ForeColor = System.Drawing.Color.Black;
-            this.labelCaseText.Location = new System.Drawing.Point(2, 32);
-            this.labelCaseText.Name = "labelCaseText";
-            this.labelCaseText.Size = new System.Drawing.Size(243, 38);
-            this.labelCaseText.TabIndex = 3;
-            this.labelCaseText.Text = "CASE";
-            this.labelCaseText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCasesText.Font = new System.Drawing.Font("Elephant", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCasesText.ForeColor = System.Drawing.Color.Black;
+            this.labelCasesText.Location = new System.Drawing.Point(23, 5);
+            this.labelCasesText.Name = "labelCasesText";
+            this.labelCasesText.Size = new System.Drawing.Size(179, 40);
+            this.labelCasesText.TabIndex = 0;
+            this.labelCasesText.Text = "CASES";
+            this.labelCasesText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCasesText.Visible = false;
             // 
             // labelCaseCount
             // 
@@ -721,17 +710,16 @@
             this.labelCaseCount.Text = "6";
             this.labelCaseCount.Visible = false;
             // 
-            // labelCasesText
+            // labelPickAText
             // 
-            this.labelCasesText.Font = new System.Drawing.Font("Elephant", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCasesText.ForeColor = System.Drawing.Color.Black;
-            this.labelCasesText.Location = new System.Drawing.Point(23, 5);
-            this.labelCasesText.Name = "labelCasesText";
-            this.labelCasesText.Size = new System.Drawing.Size(179, 40);
-            this.labelCasesText.TabIndex = 0;
-            this.labelCasesText.Text = "CASES";
-            this.labelCasesText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelCasesText.Visible = false;
+            this.labelPickAText.BackColor = System.Drawing.Color.Transparent;
+            this.labelPickAText.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPickAText.ForeColor = System.Drawing.Color.DimGray;
+            this.labelPickAText.Location = new System.Drawing.Point(74, 3);
+            this.labelPickAText.Name = "labelPickAText";
+            this.labelPickAText.Size = new System.Drawing.Size(107, 29);
+            this.labelPickAText.TabIndex = 4;
+            this.labelPickAText.Text = "PICK A";
             // 
             // labelToOpenText
             // 
@@ -743,6 +731,18 @@
             this.labelToOpenText.TabIndex = 1;
             this.labelToOpenText.Text = "TO OPEN";
             this.labelToOpenText.Visible = false;
+            // 
+            // labelCaseText
+            // 
+            this.labelCaseText.BackColor = System.Drawing.Color.Transparent;
+            this.labelCaseText.Font = new System.Drawing.Font("Elephant", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCaseText.ForeColor = System.Drawing.Color.Black;
+            this.labelCaseText.Location = new System.Drawing.Point(2, 32);
+            this.labelCaseText.Name = "labelCaseText";
+            this.labelCaseText.Size = new System.Drawing.Size(243, 38);
+            this.labelCaseText.TabIndex = 3;
+            this.labelCaseText.Text = "CASE";
+            this.labelCaseText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -809,18 +809,18 @@
             this.labelMoneyEarned.Name = "labelMoneyEarned";
             this.labelMoneyEarned.Size = new System.Drawing.Size(115, 23);
             this.labelMoneyEarned.TabIndex = 1;
-            this.labelMoneyEarned.Text = "$1,232,500,600";
+            this.labelMoneyEarned.Text = "$0";
             this.labelMoneyEarned.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelGamesPlayed
             // 
             this.labelGamesPlayed.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGamesPlayed.ForeColor = System.Drawing.Color.MediumBlue;
-            this.labelGamesPlayed.Location = new System.Drawing.Point(137, 8);
+            this.labelGamesPlayed.Location = new System.Drawing.Point(141, 8);
             this.labelGamesPlayed.Name = "labelGamesPlayed";
             this.labelGamesPlayed.Size = new System.Drawing.Size(111, 23);
             this.labelGamesPlayed.TabIndex = 0;
-            this.labelGamesPlayed.Text = "4";
+            this.labelGamesPlayed.Text = "1";
             this.labelGamesPlayed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MainForm
