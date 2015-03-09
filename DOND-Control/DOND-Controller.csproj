@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DONDController.cs" />
+    <Compile Include="IEventForm.cs" />
+    <Compile Include="IMainForm.cs" />
+    <Compile Include="IOverlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

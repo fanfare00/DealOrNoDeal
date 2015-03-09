@@ -18,9 +18,34 @@ namespace JamesDONDApplication
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            MainForm mainForm = new MainForm();
+            mainForm.Visible = false;
+
+            Overlay overlay = new Overlay(mainForm);
+            overlay.Visible = false;
+
+            EventForm eventForm = new EventForm(overlay);
+            eventForm.Visible = false;
+
+
+
+            List<int> moneyValues =  new List<int>() { 1, 5, 10, 15, 25, 50, 75, 100, 200, 300, 
+                                                       400, 500, 750, 1000, 5000, 10000, 25000, 
+                                                       50000, 75000, 100000, 200000, 300000, 
+                                                       400000, 500000, 750000, 1000000 };
+
+            List<int> caseNumbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+                                                      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 };
+
+            DONDData gameData = new DONDData("", moneyValues, caseNumbers, 6, 0, 0, 0, 0);
+
+            DONDController controller = new DONDController(mainForm, overlay, eventForm, gameData);
+            mainForm.ShowDialog();
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+           // Application.Run(new MainForm());
         }
     }
 }

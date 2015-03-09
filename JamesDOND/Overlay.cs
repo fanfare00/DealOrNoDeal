@@ -3,12 +3,17 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+using JamesDOND.Controller;
+
 namespace JamesDOND.Game
 {
-    partial class Overlay : Form
+    public partial class Overlay : Form, IOverlay
     {
+        DONDController _controller;
 
-        
+        Timer timerFadeIn;
+        Timer timerFadeOut;
+
         public Overlay(Form tocover)
         {
 
@@ -16,7 +21,7 @@ namespace JamesDOND.Game
             this.DoubleBuffered = true;
 
             this.BackColor = Color.Black;
-            this.Opacity = 0.75;      // Tweak as desired
+            this.Opacity = 0.0;      // Tweak as desired
             this.FormBorderStyle = FormBorderStyle.None;
             this.ControlBox = false;
             this.ShowInTaskbar = false;
@@ -34,6 +39,108 @@ namespace JamesDOND.Game
                 int value = 1;
                 DwmSetWindowAttribute(tocover.Handle, DWMWA_TRANSITIONS_FORCEDISABLED, ref value, 4);
             }
+
+            timerFadeIn = new Timer();
+            timerFadeIn.Interval = 30;
+            
+            timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);      
+                        
+
+            timerFadeOut = new Timer();
+            timerFadeOut.Interval = 30;
+            timerFadeOut.Tick += new EventHandler(timerFadeOut_Tick);
+         
+                
+
+
+
+        }
+
+        public void timerFadeIn_Tick(object sender, EventArgs e)
+        {
+            timerFadeOut.Stop();
+            if (!lowerOpacity())
+            {
+                timerFadeIn.Stop();
+            }
+        }
+
+        public void resetAlpha()
+        {
+            this.Opacity = 0.00;
+        }
+
+        public void timerFadeOut_Tick(object sender, EventArgs e)
+        {
+            timerFadeIn.Stop();
+            if (!increaseOpacity())
+            {
+                timerFadeOut.Stop();
+                this.Visible = false;
+            }
+        }
+
+        public void SetController(DONDController controller)
+        {
+            _controller = controller;
+        }
+
+
+        public void fadeIn()
+        {
+            this.Visible = true;
+            this.Opacity = 0.00;
+            this.timerFadeOut.Enabled = false;
+
+            if (!timerFadeIn.Enabled)
+            {
+                timerFadeIn.Start();
+            }
+            
+        }
+
+        public void fadeOut()
+        {
+
+            this.Opacity = 0.80;
+            this.timerFadeIn.Enabled = false;
+
+            if (!timerFadeOut.Enabled)
+            {
+                timerFadeOut.Start();
+            }
+            
+        }
+
+        private bool increaseOpacity()
+        {
+                
+            if (this.Opacity >= 0.00)
+            {
+                 this.Opacity -= 0.04;
+                return true;
+            }
+            else
+            {
+                this.Opacity = 0.00;
+                return false;
+            }
+
+        }
+
+        private bool lowerOpacity()
+        {
+
+             if (this.Opacity <= 0.80)
+             {
+                 this.Opacity += 0.04;
+                 return true;
+             }
+             else
+             {
+                 this.Opacity = 0.80;
+                 return false;
+             }
 
         }
 

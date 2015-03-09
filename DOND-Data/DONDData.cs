@@ -5,10 +5,10 @@ namespace JamesDOND.Data
 {
     public class DONDData
     {
-        private string _userName;
-        public string userName
+        private string _UserName;
+        public string UserName
         {
-            get { return _userName;  }
+            get { return _UserName;  }
             set
             {
                 if (value.Length > 50)
@@ -17,24 +17,71 @@ namespace JamesDOND.Data
                 }
                 else
                 {
-                    _userName = value;
+                    _UserName = value;
                 }
             }
         }
 
-        private List<int> _moneyValues;
-        public List<int> moneyVales
+        private List<int> _MoneyValues;
+        public List<int> MoneyValues
         {
-            get { return _moneyValues;  }
-            set { _moneyValues = value; }
+            get { return _MoneyValues;  }
+            set { _MoneyValues = value; }
         }
 
-        //private int[] _originalMoneyValues;
-        //public int[] originalMoneyValues
-        //{
-        //    get { return _originalMoneyValues; }
-        //    set { _originalMoneyValues = value; }
-        //}
+        private List<int> _CaseNumbers;
+        public List<int> CaseNumbers
+        {
+            get { return _CaseNumbers; }
+            set { _CaseNumbers = value; }
+        }
 
+
+        private int _GamesPlayed;
+        public int GamesPlayed
+        {
+            get { return _GamesPlayed; }
+            set { _GamesPlayed = value; }
+        }
+
+        private int _CaseNumberOriginal;
+        public int CaseNumberOriginal
+        {
+            get { return _CaseNumberOriginal; }
+            set { _CaseNumberOriginal = value; }
+        }
+
+        private int _CaseNumberPicked;
+        public int CaseNumberPicked
+        {
+            get { return _CaseNumberPicked; }
+            set { _CaseNumberPicked = value; }
+        }
+
+        private int _CaseNumberFinal;
+        public int CaseNumberFinal
+        {
+            get { return _CaseNumberFinal; }
+            set { _CaseNumberFinal = value; }
+        }
+
+        private int _TurnsBeforeOffer;
+        public int TurnsBeforeOffer
+        {
+            get { return _TurnsBeforeOffer; }
+            set { _TurnsBeforeOffer = value; }
+        }
+
+        public DONDData(string userName, List<int> moneyValues, List<int>caseNumbers, int turnsBeforeOffer, int gamesPlayed, int caseNumberPicked, int caseNumberOriginal, int caseNumberFinal)
+        {
+            UserName = userName;
+            MoneyValues = moneyValues;
+            GamesPlayed = gamesPlayed;
+            CaseNumbers = caseNumbers;
+            CaseNumberPicked = caseNumberPicked;
+            CaseNumberOriginal = caseNumberOriginal;
+            CaseNumberFinal = caseNumberFinal;
+            TurnsBeforeOffer = turnsBeforeOffer;
+        }
     }
 }
