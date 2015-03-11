@@ -91,7 +91,7 @@ namespace JamesDOND.Controller
                 getNewCaseValue();
             }
 
-            if (_gameData.CaseNumbers.Count == 1)
+            if (_gameData.CaseNumbers.Count == 2)
             {
                 _gameData.CaseNumberFinal = _gameData.CaseNumbers[0];
                 _mainForm.TurnNumber = -1;

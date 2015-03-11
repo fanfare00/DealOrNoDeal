@@ -113,6 +113,7 @@ namespace JamesDOND.Game
         {
             get { return this._turnNumber; }
             set { this._turnNumber = value;
+                  if (value == -1) { value += 1; }
                   this.labelCaseCount.Text = value.ToString();
                 }
         }
@@ -147,23 +148,20 @@ namespace JamesDOND.Game
             if (_turnNumber == 0)
             {
 
+                _controller.getNewOfferValue();
+                _controller.addOfferScene();
 
-                if (_TurnsBeforeOffer > 1)
-                {
- 
-                    _TurnsBeforeOffer -= 1;
-                }
-                else
+                _TurnsBeforeOffer -= 1;
+                if (_TurnsBeforeOffer < 1)
                 {
                     _TurnsBeforeOffer = 1;
                 }
 
-                
-
-                _controller.getNewOfferValue();
-                _controller.addOfferScene();
-
-                _turnNumber = _TurnsBeforeOffer - 1;
+                _turnNumber = _TurnsBeforeOffer;
+                if (_turnNumber == 1)
+                {
+                    _turnNumber = 1;
+                }
                
                 this.labelCaseCount.Text = _turnNumber.ToString();
             }
@@ -174,7 +172,7 @@ namespace JamesDOND.Game
             else if (_turnNumber == -1)
             {
 
-                //  
+                //   
                 _controller.addFinalScene();
             }
 

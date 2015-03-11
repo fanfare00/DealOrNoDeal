@@ -21,8 +21,6 @@ namespace JamesDOND.Game
         private Panel panelLeftValues;
         private Panel panelRightValues;
         private Panel panelGameOver;
-        private Label labelCaseNumberOriginal;
-        private Label labelCaseNumberPicked;
         private Label labelCongratulations;
         private Label labelOffer;
         private PictureBox pictureBoxCase;
@@ -32,7 +30,7 @@ namespace JamesDOND.Game
         private Label[] labelsRightValues;
         private Button buttonDeal;
         private Button buttonNoDeal;
-        private Button buttonPlayAgain;
+        //private Button buttonPlayAgain;
 
         private Timer timerFadeInE;
         private Timer timerFadeOutE;
@@ -60,9 +58,11 @@ namespace JamesDOND.Game
         private int caseNumberFinal;
         private int caseNumberOriginal;
         private int offerValue;
+        private int timerToSkip;
 
         private bool pause;
         private bool gameOver;
+        private bool test;
 
         public EventForm(Form tocover) : base(tocover)
         {
@@ -328,14 +328,14 @@ namespace JamesDOND.Game
             labelSwap.Text = "Final Decision";
             this.panelSwapScene.Controls.Add(labelSwap);
 
-            PictureBox pictureBoxOriginalCase = new PictureBox();
+            pictureBoxOriginalCase = new PictureBox();
             pictureBoxOriginalCase.Image = Properties.Resources.case_closed_alt;
             pictureBoxOriginalCase.Size = new Size(160, 240);
             pictureBoxOriginalCase.Location = new Point(20, 320);
             pictureBoxOriginalCase.SizeMode = PictureBoxSizeMode.StretchImage;
             this.panelSwapScene.Controls.Add(pictureBoxOriginalCase);
 
-            PictureBox pictureBoxSwapCase = new PictureBox();
+            pictureBoxSwapCase = new PictureBox();
             pictureBoxSwapCase.Image = Properties.Resources.case_closed_alt;
             pictureBoxSwapCase.Size = new Size(160, 240);
             pictureBoxSwapCase.Location = new Point(220, 320);
@@ -377,11 +377,11 @@ namespace JamesDOND.Game
             labelGameOverInstructions.Font = new Font("Arial Black", 12, FontStyle.Bold);
             this.panelGameOver.Controls.Add(labelGameOverInstructions);
 
-            buttonPlayAgain = new Button();
-            buttonPlayAgain.Size = new Size(130, 45);
-            buttonPlayAgain.Location = new Point(50, 140);
-            buttonPlayAgain.Text = "Play Again";
-            this.panelGameOver.Controls.Add(buttonPlayAgain);
+            //buttonPlayAgain = new Button();
+            //buttonPlayAgain.Size = new Size(130, 45);
+            //buttonPlayAgain.Location = new Point(50, 140);
+            //buttonPlayAgain.Text = "Play Again";
+            //this.panelGameOver.Controls.Add(buttonPlayAgain);
 
             Button buttonQuit = new Button();
             buttonQuit.Size = new Size(130, 45);
@@ -487,12 +487,14 @@ namespace JamesDOND.Game
             pictureBoxCase.Location = new Point(240, 185);
             pictureBoxCase.ForeColor = Color.Red;
             pictureBoxCase.Visible = false;
+            pictureBoxCase.Click += (o, e) =>
+                {
+                    skipEvent();
+                };
 
 
             this.Controls.Add(pictureBoxCase);
 
-            //pictureBoxCase.Click += new EventHandler(DealForm_Click);
-            //pictureBoxCase.Paint += new PaintEventHandler(addTextToCase);
 
             timerFadeInE = new Timer();
             timerFadeInE.Interval = 30;
@@ -522,7 +524,47 @@ namespace JamesDOND.Game
             timerExit.Interval = 8000;
             timerExit.Tick += new EventHandler(timerExit_Tick);
 
+            timerToSkip = 0;
+
             this.ResumeLayout(false);
+        }
+
+        private void skipEvent()
+        {
+            switch(timerToSkip)
+            {
+                case 0:
+                    timerCaseOpen.Interval = 1;
+                    break;
+
+                case 1:
+                    timerFadeInE.Stop();
+                    timerEndScene.Interval = 1;
+                    timerBankOffer.Interval = 1;
+                    if (gameOver)
+                    {
+                        timerEndGame.Interval = 1;
+                    }
+                    break;
+                case 2:
+                    timerExit.Interval = 1;
+                    break;
+  
+            }
+            timerToSkip += 1;
+        }
+
+        private void resetTimers()
+        {
+            timerToSkip = 0;
+
+            timerFadeInE.Interval = 30;
+            timerFadeOutE.Interval = 30;
+            timerCaseOpen.Interval = 4000;
+            timerEndScene.Interval = 4000;
+            timerBankOffer.Interval = 8000;
+            timerEndGame.Interval = 8000;
+            timerExit.Interval = 8000;
         }
 
         public void timerExit_Tick(object sender, EventArgs e)
@@ -541,15 +583,21 @@ namespace JamesDOND.Game
         {
             pictureBoxCase.Visible = false;
             panelSwapScene.Visible = true;
-            buttonPlayAgain.MouseDown += new MouseEventHandler(delegate(object bSender, MouseEventArgs bE)
-                {
-                    this.panelGameOver.Visible = false;
-                    hideForm();
-                    _controller.updateWinnings();
-                    _controller.updateGamesPlayed();
-                    _controller.returnToMain();
-                    _controller.restartGame();
-                });
+
+            pictureBoxOriginalCase.Paint += new PaintEventHandler(paintKeepNumber);
+            pictureBoxSwapCase.Paint += new PaintEventHandler(paintSwapNumber);
+
+            
+
+            //buttonPlayAgain.Click += new EventHandler(delegate(object bSender, EventArgs bE)
+            //    {
+            //        this.panelGameOver.Visible = false;
+            //        hideForm();
+            //        _controller.updateWinnings();
+            //        _controller.updateGamesPlayed();
+            //        _controller.returnToMain();
+            //        _controller.restartGame();
+            //    });
             timerEndGame.Stop();
         }
 
@@ -561,7 +609,7 @@ namespace JamesDOND.Game
             {
                 pictureBoxCase.Visible = true;
                 pictureBoxCase.Image = JamesDOND.Game.Properties.Resources.case_open_alt;
-                hideRemovedValues();
+                hideRemovedValues(test);
                 endCaseScene();
                 aTimer.Stop();
             }
@@ -597,6 +645,9 @@ namespace JamesDOND.Game
 
         public void timerEndScene_Tick(object sender, EventArgs e)
         {
+            timerToSkip = 2;
+            skipEvent();
+
             if (timerEndScene.Enabled)
             {
                 pictureBoxCase.Visible = false;
@@ -637,6 +688,8 @@ namespace JamesDOND.Game
 
         private void addCaseOpenScene()
         {
+            resetTimers();
+
             pictureBoxCase.Visible = true;
             timerCaseOpen.Stop();
             timerCaseOpen.Interval = 4000;
@@ -662,18 +715,22 @@ namespace JamesDOND.Game
 
         private void paintSwapNumber(object sender, PaintEventArgs e)
         {
-            SizeF size = e.Graphics.MeasureString(caseNumberFinal.ToString(), new Font("Tahoma", 15, FontStyle.Bold));
+            pictureBoxSwapCase.Invalidate();
+
+            SizeF size = e.Graphics.MeasureString(caseNumberFinal.ToString(), new Font("Tahoma", 30, FontStyle.Bold));
             int center = (pictureBoxSwapCase.Size.Width / 2);
             center -= (int)size.Width / 2;
-            e.Graphics.DrawString(caseNumberFinal.ToString(), new Font("Tahoma", 15), Brushes.Black, new Point(center, 85));
+            e.Graphics.DrawString(caseNumberFinal.ToString(), new Font("Tahoma", 30, FontStyle.Bold), Brushes.Black, new Point(center, 32));
         }
 
         private void paintKeepNumber(object sender, PaintEventArgs e)
         {
-            SizeF size = e.Graphics.MeasureString(caseNumberOriginal.ToString(), new Font("Tahoma", 15, FontStyle.Bold));
+            pictureBoxOriginalCase.Invalidate();
+
+            SizeF size = e.Graphics.MeasureString(caseNumberOriginal.ToString(), new Font("Tahoma", 30, FontStyle.Bold));
             int center = (pictureBoxOriginalCase.Size.Width / 2);
             center -= (int)size.Width / 2;
-            e.Graphics.DrawString(caseNumberOriginal.ToString(), new Font("Tahoma", 15), Brushes.Black, new Point(center, 85));
+            e.Graphics.DrawString(caseNumberOriginal.ToString(), new Font("Tahoma", 30, FontStyle.Bold), Brushes.Black, new Point(center, 32));
         }
 
         private void paintCaseNumber(object sender, PaintEventArgs e)
@@ -724,7 +781,6 @@ namespace JamesDOND.Game
         private void addFinalScene()
         {
             this.gameOver = true;
-            
 
             if (!timerEndGame.Enabled)
             {
@@ -734,6 +790,7 @@ namespace JamesDOND.Game
 
         private void addExitScene()
         {
+            //
             this.panelSwapScene.Visible = false;
             this.pictureBoxCase.Image = JamesDOND.Game.Properties.Resources.case_closed_alt;
             if (!timerExit.Enabled)
@@ -744,6 +801,8 @@ namespace JamesDOND.Game
 
         private void swapCase()
         {
+            test = true;
+
             _controller.getNewCaseValue();
             caseNumberPicked = caseNumberFinal;
             addCaseOpenScene();
@@ -753,6 +812,8 @@ namespace JamesDOND.Game
 
         private void keepCase()
         {
+            test = true;
+
             _controller.getNewCaseValue();     
             caseNumberPicked = caseNumberOriginal;
             addCaseOpenScene();
@@ -798,21 +859,43 @@ namespace JamesDOND.Game
             return true;
         }
 
-        private void hideRemovedValues()
+        private void hideRemovedValues(bool finalCase)
         {
             for (int i = 0; i < labelsLeftValues.Length; i++)
             {
-                if (decimal.Parse(labelsLeftValues[i].Text, NumberStyles.Currency) == caseValue)
+                if (finalCase)
                 {
                     labelsLeftValues[i].Image = JamesDOND.Game.Properties.Resources.money_back_2_gray;
                 }
+
+                if (decimal.Parse(labelsLeftValues[i].Text, NumberStyles.Currency) == caseValue)
+                {
+                    labelsLeftValues[i].Image = JamesDOND.Game.Properties.Resources.money_back_2_gray;
+
+                    if (finalCase)
+                    {
+                        labelsLeftValues[i].Image = JamesDOND.Game.Properties.Resources.money_back_2;
+                    }
+                }
+
+
             }
 
             for (int i = 0; i < labelsRightValues.Length; i++)
             {
+                if (finalCase)
+                {
+                    labelsRightValues[i].Image = JamesDOND.Game.Properties.Resources.money_back_2_gray;
+                }
+
                 if (decimal.Parse(labelsRightValues[i].Text, NumberStyles.Currency) == caseValue)
                 {
                     labelsRightValues[i].Image = JamesDOND.Game.Properties.Resources.money_back_2_gray;
+
+                    if (finalCase)
+                    {
+                        labelsRightValues[i].Image = JamesDOND.Game.Properties.Resources.money_back_2;
+                    }
                 }
             }
         }
