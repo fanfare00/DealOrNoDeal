@@ -41,3 +41,9 @@ C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Applic
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\bin\Debug\Interop.WMPLib.dll
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\bin\Debug\JamesTextBox.dll
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\DOND-Application\bin\Debug\JamesTextBox.pdb
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\JamesTextBox.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\Interop.WMPLib.dll
+C:\Users\BT21112\Desktop\DealOrNoDealMVC-master\DOND-Application\bin\Debug\JamesTextBox.pdb
+C:\Users\BT21112\Desktop\New folder\DealOrNoDealMVC\DOND-Application\obj\Debug\DOND-Application.exe
+C:\Users\BT21112\Desktop\New folder\DealOrNoDealMVC\DOND-Application\obj\Debug\DOND-Application.pdb

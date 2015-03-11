@@ -174,9 +174,9 @@ namespace JamesDOND.Game
             timerFadeOutE.Interval = 30;
             timerCaseOpen.Interval = 3300;
             timerEndScene.Interval = 3300;
-            timerBankOffer.Interval = 8000;
-            timerEndGame.Interval = 8000;
-            timerExit.Interval = 8000;
+            timerBankOffer.Interval = 6600;
+            timerEndGame.Interval = 6600;
+            timerExit.Interval = 6600;
         }
 
         public void timerExit_Tick(object sender, EventArgs e)

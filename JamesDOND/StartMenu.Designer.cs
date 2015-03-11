@@ -51,8 +51,8 @@
             this.playerSoundEffects2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.buttonBack = new System.Windows.Forms.Button();
             this.panelCredits = new System.Windows.Forms.Panel();
-            this.textBoxCredits = new JamesCustomControls.JamesTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxCredits = new JamesCustomControls.JamesTextBox();
             this.panelHelp = new System.Windows.Forms.Panel();
             this.labelHelpText = new System.Windows.Forms.Label();
             this.jamesTextBox1 = new JamesCustomControls.JamesTextBox();
@@ -391,18 +391,6 @@
             this.panelCredits.TabIndex = 16;
             this.panelCredits.Visible = false;
             // 
-            // textBoxCredits
-            // 
-            this.textBoxCredits.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCredits.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCredits.ForeColor = System.Drawing.Color.Goldenrod;
-            this.textBoxCredits.Location = new System.Drawing.Point(90, 76);
-            this.textBoxCredits.Name = "textBoxCredits";
-            this.textBoxCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.textBoxCredits.Size = new System.Drawing.Size(430, 197);
-            this.textBoxCredits.TabIndex = 16;
-            this.textBoxCredits.Text = resources.GetString("textBoxCredits.Text");
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -413,6 +401,19 @@
             this.label1.Size = new System.Drawing.Size(151, 38);
             this.label1.TabIndex = 17;
             this.label1.Text = "CREDITS";
+            // 
+            // textBoxCredits
+            // 
+            this.textBoxCredits.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCredits.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCredits.ForeColor = System.Drawing.Color.Goldenrod;
+            this.textBoxCredits.Location = new System.Drawing.Point(90, 76);
+            this.textBoxCredits.Name = "textBoxCredits";
+            this.textBoxCredits.ReadOnly = true;
+            this.textBoxCredits.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.textBoxCredits.Size = new System.Drawing.Size(430, 197);
+            this.textBoxCredits.TabIndex = 16;
+            this.textBoxCredits.Text = resources.GetString("textBoxCredits.Text");
             // 
             // panelHelp
             // 
@@ -446,10 +447,11 @@
             this.jamesTextBox1.ForeColor = System.Drawing.Color.Goldenrod;
             this.jamesTextBox1.Location = new System.Drawing.Point(90, 76);
             this.jamesTextBox1.Name = "jamesTextBox1";
+            this.jamesTextBox1.ReadOnly = true;
             this.jamesTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
             this.jamesTextBox1.Size = new System.Drawing.Size(430, 197);
             this.jamesTextBox1.TabIndex = 16;
-            this.jamesTextBox1.Text = "- HOW TO PLAY -";
+            this.jamesTextBox1.Text = resources.GetString("jamesTextBox1.Text");
             // 
             // buttonBack2
             // 
@@ -477,13 +479,13 @@
             this.BackgroundImage = global::JamesDOND.Game.Properties.Resources.bkg_main_menu;
             this.ClientSize = new System.Drawing.Size(784, 560);
             this.Controls.Add(this.panelHelp);
-            this.Controls.Add(this.panelCredits);
             this.Controls.Add(this.playerSoundEffects2);
             this.Controls.Add(this.soundPlayerEffects);
             this.Controls.Add(this.soundPlayerMainMenu);
             this.Controls.Add(this.panelBanner);
             this.Controls.Add(this.panelMenuOptions);
             this.Controls.Add(this.panelLogin);
+            this.Controls.Add(this.panelCredits);
             this.Location = new System.Drawing.Point(500, 500);
             this.Name = "StartMenu";
             this.Text = "Deal Or No Deal";

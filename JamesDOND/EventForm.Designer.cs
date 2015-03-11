@@ -385,15 +385,15 @@ namespace JamesDOND.Game
             timerEndScene.Tick += new EventHandler(timerEndScene_Tick);
 
             timerBankOffer = new Timer();
-            timerBankOffer.Interval = 8000;
+            timerBankOffer.Interval = 6600;
             timerBankOffer.Tick += new EventHandler(timerBankOffer_Tick);
 
             timerEndGame = new Timer();
-            timerEndGame.Interval = 8000;
+            timerEndGame.Interval = 6600;
             timerEndGame.Tick += new EventHandler(timerEndGame_Tick);
 
             timerExit = new Timer();
-            timerExit.Interval = 8000;
+            timerExit.Interval = 6600;
             timerExit.Tick += new EventHandler(timerExit_Tick);
 
             timerToSkip = 0;

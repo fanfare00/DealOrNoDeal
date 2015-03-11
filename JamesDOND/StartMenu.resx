@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="panelMenuOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonExit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAS4AAAB4CAYAAABM4B8dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
+        wgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
         B3hUZd7+8aHXID1AJgkgVRCpIiICIlWxoUhRivQuvaUX0oCEHiC9997o0ntvofcmgqig6F+8/7/7zAwM
         vOwC4u77wjxzXV/3WnY955nd/X32OSeTM7q/+/rlUoLul4txup8vxPCfFpRKSNZSTamB1FRqoVKpLDYa
         QAtelWgDjSi4IbSG/MP/3quAxIVUk15/791GfT2dvk4MWzx2d1r0tHPrs9zurc9yxXeZLliX4SQ5Ym36
@@ -354,10 +360,13 @@
         ZVyoSqWyrEzzTwtoAm2gEf8AVjrd/weGssJHiSH0UAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonHelp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonHelp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAS4AAAB4CAYAAABM4B8dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
+        wgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
         B3hUZd7+8aHXID1AJgkgVRCpIiICIlWxoUhRivQuvaUX0oCEHiC9997o0ntvofcmgqig6F+8/7/7zAwM
         vOwC4u77wjxzXV/3WnY955nd/X32OSeTM7q/+/rlUoLul4txup8vxPCfFpRKSNZSTamB1FRqoVKpLDYa
         QAtelWgDjSi4IbSG/MP/3quAxIVUk15/791GfT2dvk4MWzx2d1r0tHPrs9zurc9yxXeZLliX4SQ5Ym36
@@ -590,10 +599,13 @@
         ZVyoSqWyrEzzTwtoAm2gEf8AVjrd/weGssJHiSH0UAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonCredits.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonCredits.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAS4AAAB4CAYAAABM4B8dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
+        wgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
         B3hUZd7+8aHXID1AJgkgVRCpIiICIlWxoUhRivQuvaUX0oCEHiC9997o0ntvofcmgqig6F+8/7/7zAwM
         vOwC4u77wjxzXV/3WnY955nd/X32OSeTM7q/+/rlUoLul4txup8vxPCfFpRKSNZSTamB1FRqoVKpLDYa
         QAtelWgDjSi4IbSG/MP/3quAxIVUk15/791GfT2dvk4MWzx2d1r0tHPrs9zurc9yxXeZLliX4SQ5Ym36
@@ -826,10 +838,13 @@
         ZVyoSqWyrEzzTwtoAm2gEf8AVjrd/weGssJHiSH0UAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonHighScores.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonHighScores.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAS4AAAB4CAYAAABM4B8dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
+        wgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAA1y0lEQVR4Xu3d
         B3hUZd7+8aHXID1AJgkgVRCpIiICIlWxoUhRivQuvaUX0oCEHiC9997o0ntvofcmgqig6F+8/7/7zAwM
         vOwC4u77wjxzXV/3WnY955nd/X32OSeTM7q/+/rlUoLul4txup8vxPCfFpRKSNZSTamB1FRqoVKpLDYa
         QAtelWgDjSi4IbSG/MP/3quAxIVUk15/791GfT2dvk4MWzx2d1r0tHPrs9zurc9yxXeZLliX4SQ5Ym36
@@ -1062,6 +1077,45 @@
         ZVyoSqWyrEzzTwtoAm2gEf8AVjrd/weGssJHiSH0UAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonPlay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelBanner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonContinue.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labelLoginText.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="textBoxName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="comboBoxSign.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="listBoxAge.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="soundPlayerMainMenu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="soundPlayerMainMenu.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -1073,6 +1127,9 @@
         AAAL
 </value>
   </data>
+  <metadata name="soundPlayerEffects.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="soundPlayerEffects.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -1084,6 +1141,9 @@
         AAAL
 </value>
   </data>
+  <metadata name="playerSoundEffects2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="playerSoundEffects2.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -1095,8 +1155,23 @@
         AAAL
 </value>
   </data>
+  <metadata name="buttonBack.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelCredits.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="textBoxCredits.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="textBoxCredits.Text" xml:space="preserve">
-    <value>                           - ID INFORMATION -
+    <value>                                 - ABOUT -
+This Deal Or No Deal game was created by James McCarthy as a class project for Larry Forman's CISC 193 C# class at San Diego City College. Thank you to my friends and classmates at CISC193 and a huge thanks to Professor Forman for allowing me to branch out and deepend my programming knowledge.
+
+                           - ID INFORMATION -
 
 Programmer Name :                             James McCarthy
 Assignment # :                                            Project #1          
@@ -1108,12 +1183,56 @@ Hours :                                                                  30
 Difficulty :                                                               7
 Program Name :                                 Deal or No Deal
 
--ABOUT-
 
--MEDIA-
+                                  -MEDIA-
 
--STARS-
+Audio files and images used in this program may belong to iWin inc.
 
-</value>
+                                 -STARS-
+
+
+1 STAR:  3 advanced features: Multiple forms, classes, lists
+1 STAR:  pizzaz - added cool transitions and transparent overlays
+1 STAR:  disable other controls so game only continues when deal is pressed
+1 STAR:  use pictures to represent suitcases
+1 STAR:  no repitition of money amounts
+1 STAR:  use 16 suitcases in the game
+1 STAR:  use the full number of suitcases of the TV game
+1 STAR:  add an appealing background image relating to the game
+1 STAR:  use a timer to continuousl display elapsed time
+1 STAR:  handle what happens when user opens last suitcase
+? STARS: online scoreboard
+
+                         TOTAL STARS: 10 + ?</value>
   </data>
+  <metadata name="panelHelp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labelHelpText.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="jamesTextBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="jamesTextBox1.Text" xml:space="preserve">
+    <value>                             - HOW TO PLAY -
+
+Deal or No Deal is an exciting game of chance where players can test their luck in hopes of walking away with a big score. You will have the option to select from 26 cases, each case holds in it an amount of money between $1 and $1,000,000, but be careful, revealing the contents of a case removes the dollar amount from the pool.
+
+Start by selecting your initial case from the 26 cases. You will have the opportunity to exchance this case at the end of the game.
+
+After you select your initial case, start opening the remaining cases one by one until the round ends, revealing their contents and removing their value from the pool.
+
+After opening the designated amount of cases in the round, the bank will offer you a deal, a large sum of money that is slightly less than the average of all the remaining values hidden within the cases in exchange for you to end the game and walk away.
+
+Once all but two cases have been eliminated, you will be given the option to swap the final case remaining with your original case.
+
+Either way you choose, you will be gifted the value hidden in side the very last case and hopefully walk away a millionare!</value>
+  </data>
+  <metadata name="buttonBack2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
