@@ -14,6 +14,11 @@ namespace JamesDOND.Game
         Timer timerFadeIn;
         Timer timerFadeOut;
 
+        public Overlay()
+        {
+
+        }
+
         public Overlay(Form tocover)
         {
 
@@ -49,10 +54,10 @@ namespace JamesDOND.Game
             timerFadeOut = new Timer();
             timerFadeOut.Interval = 30;
             timerFadeOut.Tick += new EventHandler(timerFadeOut_Tick);
-         
-                
 
 
+
+            
 
         }
 
@@ -190,7 +195,7 @@ namespace JamesDOND.Game
             // Always keep the owner activated instead
             this.BeginInvoke(new Action(() => this.Owner.Activate()));
         }
-        private System.ComponentModel.IContainer components;
+        //private System.ComponentModel.IContainer components;
         private const int DWMWA_TRANSITIONS_FORCEDISABLED = 3;
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hWnd, int attr, ref int value, int attrLen);

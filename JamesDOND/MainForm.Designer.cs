@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@
             this.labelTimeElapsed = new System.Windows.Forms.Label();
             this.labelMoneyEarned = new System.Windows.Forms.Label();
             this.labelGamesPlayed = new System.Windows.Forms.Label();
+            this.timerElapsed = new System.Windows.Forms.Timer(this.components);
             this.panelPlayerInfo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelCasePicks.SuspendLayout();
@@ -585,7 +587,7 @@
             this.panelPlayerInfo.Controls.Add(this.labelUserName);
             this.panelPlayerInfo.Controls.Add(this.labelMyCase);
             this.panelPlayerInfo.Controls.Add(this.buttonMyCase);
-            this.panelPlayerInfo.Location = new System.Drawing.Point(206, 455);
+            this.panelPlayerInfo.Location = new System.Drawing.Point(205, 456);
             this.panelPlayerInfo.Name = "panelPlayerInfo";
             this.panelPlayerInfo.Size = new System.Drawing.Size(141, 108);
             this.panelPlayerInfo.TabIndex = 103;
@@ -642,7 +644,6 @@
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(125, 26);
             this.labelUserName.TabIndex = 60;
-            this.labelUserName.Text = "James McCarthy";
             this.labelUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelMyCase
@@ -681,7 +682,7 @@
             this.panelCasePicks.Controls.Add(this.labelPickAText);
             this.panelCasePicks.Controls.Add(this.labelToOpenText);
             this.panelCasePicks.Controls.Add(this.labelCaseText);
-            this.panelCasePicks.Location = new System.Drawing.Point(343, 490);
+            this.panelCasePicks.Location = new System.Drawing.Point(341, 488);
             this.panelCasePicks.Name = "panelCasePicks";
             this.panelCasePicks.Size = new System.Drawing.Size(256, 72);
             this.panelCasePicks.TabIndex = 104;
@@ -798,7 +799,7 @@
             this.labelTimeElapsed.Name = "labelTimeElapsed";
             this.labelTimeElapsed.Size = new System.Drawing.Size(115, 23);
             this.labelTimeElapsed.TabIndex = 2;
-            this.labelTimeElapsed.Text = "1:46:35";
+            this.labelTimeElapsed.Text = "00:00";
             this.labelTimeElapsed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelMoneyEarned
@@ -822,6 +823,11 @@
             this.labelGamesPlayed.TabIndex = 0;
             this.labelGamesPlayed.Text = "1";
             this.labelGamesPlayed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timerElapsed
+            // 
+            this.timerElapsed.Interval = 1000;
+            this.timerElapsed.Tick += new System.EventHandler(this.timerElapsed_Tick);
             // 
             // MainForm
             // 
@@ -922,6 +928,7 @@
         private System.Windows.Forms.Label labelTimeElapsed;
         private System.Windows.Forms.Label labelMoneyEarned;
         private System.Windows.Forms.Label labelGamesPlayed;
+        private System.Windows.Forms.Timer timerElapsed;
 
     }
 }

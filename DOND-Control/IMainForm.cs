@@ -9,6 +9,7 @@ namespace JamesDOND.Controller
         void SetController(DONDController controller);
         void SetInitialCase(int caseNumberOriginal);
         void ResetForm();
+        void ShutDown();
 
         string UserName { get; set; }
         int GamesPlayed { get; set; }

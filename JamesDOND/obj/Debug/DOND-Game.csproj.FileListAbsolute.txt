@@ -40,3 +40,11 @@ C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\o
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\DOND-Game.csproj.GenerateResource.Cache
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\JamesDOND.dll
 C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\JamesDOND.pdb
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\JamesDOND.Game.StartMenu.resources
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\bin\Debug\Interop.WMPLib.dll
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\Interop.WMPLib.dll
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\obj\Debug\DOND-Game.csproj.ResolveComReference.cache
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\bin\Debug\JamesTextBox.dll
+C:\Users\james\Desktop\CompSci 2015\Visual Studio Projects\JamesDOND\JamesDOND\bin\Debug\JamesTextBox.pdb

@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Text;
 using System.Collections;
 using JamesDOND.Data;
 using System.Collections.Generic;
+
+using System.Net;
+using System.IO;
 
 namespace JamesDOND.Controller
 {
@@ -10,15 +14,18 @@ namespace JamesDOND.Controller
         IMainForm _mainForm;
         IOverlay _overlay;
         IEventForm _eventForm;
+        IStartMenu _startMenu;
         DONDData _gameData;
 
-        public DONDController(IMainForm mainForm, IOverlay overlay, IEventForm eventForm, DONDData gameData)
+        public DONDController(IMainForm mainForm, IOverlay overlay, IEventForm eventForm, IStartMenu startMenu, DONDData gameData)
         {
             _mainForm = mainForm;
             _overlay = overlay;
             _eventForm = eventForm;
+            _startMenu = startMenu;
             _gameData = gameData;
 
+            _startMenu.SetController(this);
             _mainForm.SetController(this);
             _eventForm.SetController(this);
             _mainForm.TurnNumber = _gameData.TurnsBeforeOffer;
@@ -30,8 +37,48 @@ namespace JamesDOND.Controller
             _mainForm.UserName = userName;
             _eventForm.UserName = userName;
            // _eventForm.UpdateEventData();
-            _gameData.UserName = _mainForm.UserName;
+            _gameData.UserName = userName;
 
+        }
+
+        public void playCaseOpenningSound()
+        {
+            _startMenu.PlayCaseOpenningSound();
+        }
+
+        public void playCaseOpennedSound()
+        {
+            _startMenu.PlayCaseOpennedSound();
+        }
+
+        public void playTickSound()
+        {
+            _startMenu.PlayTickSound();
+        }
+
+        public void playClickSound()
+        {
+            _startMenu.PlayClickSound();
+        }
+
+        public void playPhoneSound()
+        {
+            _startMenu.PlayPhoneSound();
+        }
+
+        public void playCrowdBooSound()
+        {
+            _startMenu.PlayCrowdBooSound();
+        }
+
+        public void playWinTheme()
+        {
+            _startMenu.PlayWinTheme();
+        }
+
+        public void playNoDealSound()
+        {
+            _startMenu.PlayNoDealSound();
         }
 
         public void addCaseScene()
@@ -116,16 +163,16 @@ namespace JamesDOND.Controller
             _eventForm.CaseValue = value;
         }
 
-        public void updateWinnings()
+        public void updateWinnings(int value)
         {
-            _gameData.TotalWinnings += _eventForm.CaseValue;
-            _mainForm.TotalWinnings += _gameData.TotalWinnings;
+            _gameData.TotalWinnings += value;
+            _mainForm.TotalWinnings = _gameData.TotalWinnings;
         }
 
         public void updateGamesPlayed()
         {
             _gameData.GamesPlayed += 1;
-            _mainForm.GamesPlayed += 1;
+            _mainForm.GamesPlayed = _gameData.GamesPlayed;
         }
 
         public void restartGame()
@@ -147,6 +194,87 @@ namespace JamesDOND.Controller
             _gameData.TurnsBeforeOffer = 6;
             _mainForm.TurnsBeforeOffer = 6;
             _mainForm.TurnNumber = 6;
+        }
+
+        public void returnToMainMenu()
+        {
+            restartGame();
+            _gameData.GamesPlayed = 0;
+            _gameData.UserName = "";
+            _gameData.TotalWinnings = 0;
+
+            _mainForm.ShutDown();
+            _startMenu.ReturnToMainMenu();
+        }
+
+        public void postToServer(string score)
+        {
+            //The method we will use to send the data, this can be POST or GET.
+            string requestmethod = "POST";
+
+            //Here we will enter the data to send, just like if we where to go to a webpage and enter variables,
+            // we would type: "www.somesite.com?var1=Hello&var2=Server!"!
+            string postData = "var1=" + _gameData.UserName + "&var2=" + score + "";
+
+            //The Byte Array that will be used for writing the data to the stream.
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+
+            //The URL of the webpage to send the data to.
+            string URL = "http://i.jdonaldmccarthy.bitnamiapp.com/index/testTester.php";
+
+            //The type of content being send, this is almost always "application/x-www-form-urlencoded".
+            string contenttype = "application/x-www-form-urlencoded";
+
+            //What the server sends back:
+            string responseFromServer = null;
+
+            //Here we will create the WebRequest object, and enter the URL as soon as it is created.
+            WebRequest request = WebRequest.Create(URL);
+
+            //We also need a Stream:
+            Stream dataStream;
+
+            //...And a webResponce,
+            WebResponse response;
+
+            //don't forget the streamreader either!
+            StreamReader reader;
+
+            //We will need to set the method used to send the data.
+            request.Method = requestmethod;
+
+            //Then the contenttype:
+            request.ContentType = contenttype;
+
+            //content length
+            request.ContentLength = byteArray.Length;
+
+            //ok, now get the request from the webRequest object, and put it into our Stream:
+            dataStream = request.GetRequestStream();
+
+            // Write the data to the request stream.
+            dataStream.Write(byteArray, 0, byteArray.Length);
+
+            // Close the Stream object.
+            dataStream.Close();
+
+
+            //Get the responce
+            response = request.GetResponse();
+
+            // Get the stream containing content returned by the server.
+            dataStream = response.GetResponseStream();
+
+            //Open the responce stream:
+            reader = new StreamReader(dataStream);
+
+            //read the content into the responcefromserver string
+            responseFromServer = reader.ReadToEnd();
+
+            // Clean up the streams.
+            reader.Close();
+            dataStream.Close();
+            response.Close();
         }
         
     }

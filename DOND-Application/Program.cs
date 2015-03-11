@@ -28,6 +28,8 @@ namespace JamesDONDApplication
             EventForm eventForm = new EventForm(overlay);
             eventForm.Visible = false;
 
+            StartMenu mainMenu = new StartMenu(mainForm);
+            mainMenu.Visible = false;
 
 
             List<int> moneyValues =  new List<int>() { 1, 5, 10, 15, 25, 50, 75, 100, 200, 300, 
@@ -40,8 +42,14 @@ namespace JamesDONDApplication
 
             DONDData gameData = new DONDData("", moneyValues, caseNumbers, 6, 1, 0, 0, 0);
 
-            DONDController controller = new DONDController(mainForm, overlay, eventForm, gameData);
+            DONDController controller = new DONDController(mainForm, overlay, eventForm, mainMenu, gameData);
+
+
+            //mainForm.Visible = true;
+            mainMenu.ShowDialog();
             mainForm.ShowDialog();
+          
+
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 using JamesDOND.Data;
 using JamesDOND.Controller;
@@ -20,17 +21,21 @@ namespace JamesDOND.Game
         private int _caseNumber;
         private int _turnNumber;
         private int _TurnsBeforeOffer;
-        private int _GamesPlayed;
-        private int _TotalEarnings;
-        
-        //private int caseNumberOriginal;
-        //private int caseNumberFinal;
+        private Stopwatch elapsedTime;
 
         public MainForm()
         {
+
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.DoubleBuffered = true;
+
             InitializeComponent();
-            //overlay = new Overlay(this);
+
+
+            elapsedTime = new Stopwatch();
+            elapsedTime.Start();
+            timerElapsed.Start();
 
             foreach (Control c in this.Controls)
             {
@@ -40,6 +45,7 @@ namespace JamesDOND.Game
                         {
                             
                             c.BackgroundImage = JamesDOND.Game.Properties.Resources.case_only_small_alt;
+                            _controller.playTickSound();
                             
                         };
 
@@ -49,6 +55,18 @@ namespace JamesDOND.Game
                             c.BackgroundImage = JamesDOND.Game.Properties.Resources.case_only_small;
                         };
                 }
+            }
+
+
+        }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+
+            if (UserName == "")
+            {
+                this.Close();
             }
         }
 
@@ -82,8 +100,7 @@ namespace JamesDOND.Game
             _turnNumber = 6;
             _TurnsBeforeOffer = 6;
             
-            labelGamesPlayed.Text = (_GamesPlayed+1).ToString();
-            labelMoneyEarned.Text = _TotalEarnings.ToString("c0");
+           // labelGamesPlayed.Text = (_GamesPlayed+1).ToString();
         }
 
         public void SetInitialCase(int caseNumberOriginal)
@@ -94,6 +111,11 @@ namespace JamesDOND.Game
             labelCaseCount.Visible = true;
             labelCasesText.Visible = true;
             labelToOpenText.Visible = true;
+        }
+
+        public void ShutDown()
+        {
+            this.Visible = false;
         }
 
 
@@ -120,8 +142,8 @@ namespace JamesDOND.Game
 
         public int GamesPlayed
         {
-            get { return _GamesPlayed; }
-            set { this._GamesPlayed = value; }
+            get { return Int32.Parse(this.labelGamesPlayed.Text); }
+            set { this.labelGamesPlayed.Text = value.ToString(); }
         }
 
         public int CaseNumber
@@ -132,12 +154,14 @@ namespace JamesDOND.Game
 
         public int TotalWinnings
         {
-            get { return this._TotalEarnings; }
-            set { this._TotalEarnings = value; }
+            get { return Int32.Parse(this.labelMoneyEarned.Text); }
+            set {this.labelMoneyEarned.Text = value.ToString("c0"); }
         }
 
         private void buttonCase_Click(object sender, EventArgs e)
         {
+            _controller.playClickSound();
+
             Button caseClicked = sender as Button;
 
             caseClicked.Visible = false;
@@ -175,6 +199,16 @@ namespace JamesDOND.Game
                 //   
                 _controller.addFinalScene();
             }
+
+        }
+
+        private void timerElapsed_Tick(object sender, EventArgs e)
+        {
+            TimeSpan ts = elapsedTime.Elapsed;
+            string elapsed = String.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
+
+            labelTimeElapsed.Text = elapsed;
+
 
         }
 

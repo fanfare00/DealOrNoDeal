@@ -35,6 +35,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JamesTextBox">
+      <HintPath>..\..\..\Misc\JamesTextBox\JamesTextBox\bin\Debug\JamesTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +53,9 @@
     <Compile Include="EventForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EventForm.Designer.cs">
+      <DependentUpon>EventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartMenu.Designer.cs">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +88,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StartMenu.resx">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -212,6 +228,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\case_only_small_alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
